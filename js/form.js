@@ -26,7 +26,7 @@ function FormFunc() {
 
 
 
-        window.location.href = '../api/students.html'
+        window.location.href = './students.html'
     }
     else {
         alert('wrong cred')

@@ -24,7 +24,7 @@ function FormFunc() {
         localStorage.setItem('currUser-firstname', user_pwd[email][7])
         localStorage.setItem('loggedIn', 'true')
 
-        var delayInMilliseconds = 500; //1 second
+        var delayInMilliseconds = 300; //1 second
 
         setTimeout(function () {
             window.location.href = '../Pages/students.html'

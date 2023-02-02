@@ -1,17 +1,30 @@
-function validateForm() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+function loginFunc() {
+    console.log('dfdfjdfj')
+    var object = {}
+    var inputEmail = document.getElementById("email").value;
+    var inputPassword = document.getElementById('password').value;
+    object['email'] = inputEmail
+    object['password'] = inputPassword
 
-    if (username == "james@uotagooro.co.uk" && password == "pass") {
-        window.location.href = "../api/student.html";
-        return false;
-    }
-    else if (username == "charles@uotagooro.co.uk" && password == "pass") {
-        window.location.href = "../api/students.html"
-        return false;
-    }
-    else {
-        alert("Incorrect username or password");
-        return false;
-    }
-}
+    console.log(object)
+
+    fetch('https://uotagooro.co.uk/api/login', {
+        method: 'POST',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(object)
+    }).then(response => response.json()).then(
+        data => {
+            console.log(data);
+        }
+    ).catch(error => {
+        console.error('Error:', error)
+    })
+
+
+    // localStorage.setItem('email', inputEmail)
+    // localStorage.getItem('password', inputPassword)
+
+}   

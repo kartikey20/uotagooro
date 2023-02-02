@@ -12,15 +12,15 @@
         <h1>University of Otagooro</h1>
     </header>
     <section>
-        <form onsubmit="return validateForm()">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+        <div>
+            <label for="email">Username:</label>
+            <input type="text" id="email" name="email">
             <br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
             <br><br>
-            <input type="submit" value="Login">
-        </form>
+            <button type="submit" onclick="loginFunc()">Login</button>
+        </div>
     </section>
     <script src="../js/form.js"></script>
 </body>

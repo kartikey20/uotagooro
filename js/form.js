@@ -22,12 +22,13 @@ function FormFunc() {
         localStorage.setItem('currUser-sem', user_pwd[email][5])
         localStorage.setItem('currUser-grade', user_pwd[email][6])
         localStorage.setItem('currUser-firstname', user_pwd[email][7])
+        localStorage.setItem('loggedIn', 'true')
 
+        var delayInMilliseconds = 500; //1 second
 
-
-
-
-        window.location.href = './students.html'
+        setTimeout(function () {
+            window.location.href = '../Pages/students.html'
+        }, delayInMilliseconds);
     }
     else {
         alert('wrong cred')

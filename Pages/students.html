@@ -32,6 +32,8 @@
             grade.innerHTML += c_grade
             firstname.innerHTML += c_first
         }
+        var session = localStorage.getItem('loggedIn')
+        console.log(session)
         window.onload = run;
     </script>
 
@@ -47,7 +49,10 @@
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#grades">Grades</a></li>
                 <li><a href="#resources">Resources</a></li>
-            </ul>
+                <li><button onclick="(function(){
+                    localStorage.setItem('loggedIn', 'false')
+                    window.location.href = '../index.html'
+                })()">Logout</button>
         </nav>
     </header>
     <main>

@@ -1,12 +1,12 @@
 function FormFunc() {
     user_pwd = {
-        'alice@uotagooro.co.uk': ['Password', 'Alice Hawash', 'Anthropology', 'Archaeology and Anthropology', '2022-09-01', '2', 'A'],
-        'simon@uotagooro.co.uk': ['Password', 'Simon Head', 'Music', 'Liberal Arts', '2021-09-01', '3', 'A'],
-        'nigel@uotagooro.co.uk': ['Password', 'Nigel Leaney', 'Music', 'Liberal Arts', '2020-09-01', '6', 'A'],
-        'andrea@uotagooro.co.uk': ['Password', 'Andrea Kinigadner', 'Politics', 'Liberal Arts', '2020-09-01', 6, 'A'],
-        'david@uotagooro.co.uk': ['Password', 'David Munoz Matinez', 'Computer Science Engineering', 'Liberal Arts', '2020-09-01', 6, 'A'],
-        'james@uotagooro.co.uk': ['Password', 'James Williams', 'Computer Science Engineering', 'Computer Science', '2022-09-01', 2, 'A'],
-        'charles@uotagooro.co.uk': ['Password', 'Charles', 'Computer Science Engineering', 'Computer Science', '2021-09-01', 2, 'A']
+        'alice@uotagooro.co.uk': ['Password', 'Alice Hawash', 'Anthropology', 'Archaeology and Anthropology', '2022-09-01', '2', 'A', 'Alice'],
+        'simon@uotagooro.co.uk': ['Password', 'Simon Head', 'Music', 'Liberal Arts', '2021-09-01', '3', 'A', 'Simon'],
+        'nigel@uotagooro.co.uk': ['Password', 'Nigel Leaney', 'Music', 'Liberal Arts', '2020-09-01', '6', 'A', 'Nigel'],
+        'andrea@uotagooro.co.uk': ['Password', 'Andrea Kinigadner', 'Politics', 'Liberal Arts', '2020-09-01', 6, 'A', 'Andrea'],
+        'david@uotagooro.co.uk': ['Password', 'David Munoz Matinez', 'Computer Science Engineering', 'Liberal Arts', '2020-09-01', 6, 'A', 'David'],
+        'james@uotagooro.co.uk': ['Password', 'James Williams', 'Computer Science Engineering', 'Computer Science', '2022-09-01', 2, 'A', 'James'],
+        'charles@uotagooro.co.uk': ['Password', 'Charles', 'Computer Science Engineering', 'Computer Science', '2021-09-01', 2, 'A', 'Charles']
     }
     localStorage.setItem('testObject', JSON.stringify(user_pwd))
     var email = document.getElementById('email').value
@@ -21,6 +21,7 @@ function FormFunc() {
         localStorage.setItem('currUser-doj', user_pwd[email][4])
         localStorage.setItem('currUser-sem', user_pwd[email][5])
         localStorage.setItem('currUser-grade', user_pwd[email][6])
+        localStorage.setItem('currUser-firstname', user_pwd[email][7])
 
 
 

@@ -14,6 +14,7 @@
             var c_doj = localStorage.getItem('currUser-doj')
             var c_sem = localStorage.getItem('currUser-sem')
             var c_grade = localStorage.getItem('currUser-grade')
+            var c_first = localStorage.getItem('currUser-firstname')
 
             var name = document.getElementById('username')
             var course = document.getElementById('course')
@@ -21,6 +22,7 @@
             var doj = document.getElementById('date-of-joining')
             var sem = document.getElementById('current-sem')
             var grade = document.getElementById('overall-grade')
+            var firstname = document.getElementById('heading-firstname')
 
             name.innerHTML += c_name
             course.innerHTML += c_couse
@@ -28,6 +30,7 @@
             doj.innerHTML += c_doj
             sem.innerText += c_sem
             grade.innerHTML += c_grade
+            firstname.innerHTML += c_first
         }
         window.onload = run;
     </script>
@@ -48,15 +51,15 @@
         </nav>
     </header>
     <main>
-        <h3>Welcome </h3>
+        <h3 id="heading-firstname">Welcome </h3>
         <section>
             <h2>Your Profile</h2>
-            <p id="username">Name: </p>
-            <p id="course">Course: </p>
-            <p id="department">Department: </p>
-            <p id="date-of-joining">Date of Joining: </p>
-            <p id="current-sem">Current Semester: </p>
-            <p id="overall-grade">Overall grade: </p>
+            <p id="username"><strong>Name:</strong>&nbsp; </p>
+            <p id="course"><strong>Course:</strong>&nbsp; </p>
+            <p id="department"><strong>Department:</strong>&nbsp; </p>
+            <p id="date-of-joining"><strong>Date of Joining:</strong>&nbsp; </p>
+            <p id="current-sem"><strong>Current Semester:</strong>&nbsp; </p>
+            <p id="overall-grade"><strong>Overall grade:</strong>&nbsp; </p>
         </section>
         <section id="announcements">
             <h2>Announcements</h2>

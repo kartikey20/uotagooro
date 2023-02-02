@@ -8,8 +8,26 @@
     <link rel="stylesheet" href="../styles/student.css">
     <script type="text/javascript">
         function run() {
-            console.log(localStorage.getItem('currUser'))
-            console.log(JSON.parse(localStorage.getItem('testObject')))
+            var c_name = localStorage.getItem('currUser-name')
+            var c_couse = localStorage.getItem('currUser-course')
+            var c_dept = localStorage.getItem('currUser-dept')
+            var c_doj = localStorage.getItem('currUser-doj')
+            var c_sem = localStorage.getItem('currUser-sem')
+            var c_grade = localStorage.getItem('currUser-grade')
+
+            var name = document.getElementById('username')
+            var course = document.getElementById('course')
+            var dept = document.getElementById('department')
+            var doj = document.getElementById('date-of-joining')
+            var sem = document.getElementById('current-sem')
+            var grade = document.getElementById('overall-grade')
+
+            name.innerHTML += c_name
+            course.innerHTML += c_couse
+            dept.innerText += c_dept
+            doj.innerHTML += c_doj
+            sem.innerText += c_sem
+            grade.innerHTML += c_grade
         }
         window.onload = run;
     </script>
@@ -30,7 +48,16 @@
         </nav>
     </header>
     <main>
-        <h3>Welcome Charles,</h3>
+        <h3>Welcome </h3>
+        <section>
+            <h2>Your Profile</h2>
+            <p id="username">Name: </p>
+            <p id="course">Course: </p>
+            <p id="department">Department: </p>
+            <p id="date-of-joining">Date of Joining: </p>
+            <p id="current-sem">Current Semester: </p>
+            <p id="overall-grade">Overall grade: </p>
+        </section>
         <section id="announcements">
             <h2>Announcements</h2>
             <ul>
@@ -38,6 +65,11 @@
                 <li>Midterm exam date changed to next week</li>
                 <li>Office hours cancelled for Thursday</li>
             </ul>
+        </section>
+        <section>
+            <h2>Upcoming Exams</h2>
+            <span>Data Sturctors and Alogrithms: </span>
+            <a href="#">Link</a>
         </section>
         <section id="schedule">
             <h2>Schedule</h2>
@@ -65,27 +97,6 @@
                     <td></td>
                     <td>English 102</td>
                     <td></td>
-                </tr>
-            </table>
-        </section>
-        <section id="grades">
-            <h2>Grades</h2>
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <th>Grade</th>
-                </tr>
-                <tr>
-                    <td>Math 101</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>English 102</td>
-                    <td>B+</td>
-                </tr>
-                <tr>
-                    <td>Science 103</td>
-                    <td>A-</td>
                 </tr>
             </table>
         </section>

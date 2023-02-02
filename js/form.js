@@ -11,9 +11,21 @@ function FormFunc() {
     localStorage.setItem('testObject', JSON.stringify(user_pwd))
     var email = document.getElementById('email').value
     var password = document.getElementById('password').value
+    console.log(user_pwd[email])
     console.log(email, password)
     if ((email in user_pwd) && (password = 'Password')) {
         localStorage.setItem('currUser', email)
+        localStorage.setItem('currUser-name', user_pwd[email][1])
+        localStorage.setItem('currUser-course', user_pwd[email][2])
+        localStorage.setItem('currUser-dept', user_pwd[email][3])
+        localStorage.setItem('currUser-doj', user_pwd[email][4])
+        localStorage.setItem('currUser-sem', user_pwd[email][5])
+        localStorage.setItem('currUser-grade', user_pwd[email][6])
+
+
+
+
+
         window.location.href = '../api/students.html'
     }
     else {
